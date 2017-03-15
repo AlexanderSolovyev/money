@@ -1,3 +1,3 @@
 class Type < ApplicationRecord
-  has_one :tran
+  has_many :trans
 end

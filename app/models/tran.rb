@@ -1,3 +1,3 @@
 class Tran < ApplicationRecord
-  has_one :type
+  belongs_to :type
 end

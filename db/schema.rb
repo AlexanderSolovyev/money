@@ -10,11 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170315114741) do
+ActiveRecord::Schema.define(version: 20170315172237) do
 
   create_table "cards", force: :cascade do |t|
     t.string   "name"
     t.decimal  "balance"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trans", force: :cascade do |t|
+    t.date     "date"
+    t.decimal  "quality"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "type_id"
+    t.index ["type_id"], name: "index_trans_on_type_id"
+  end
+
+  create_table "types", force: :cascade do |t|
+    t.string   "operation"
+    t.boolean  "debet"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
