@@ -1,0 +1,11 @@
+<h1>Cards#show</h1>
+<%= link_to 'New', new_card_path %>
+<br />
+<% @cards.each do |card| %>
+  <%= card.name %>
+  <%= card.balance %>
+<%= link_to 'Edit', edit_card_path(card) %>
+<%= link_to 'Destroy', card, method: :delete %>
+<br />
+<% end %>
+
