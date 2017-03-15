@@ -1,0 +1,16 @@
+<% if tran.errors.any? %>
+   <div id="error_explanation">
+     <h2><%= pluralize(tran.errors.count, "error") %>error </h2>
+     <ul>
+       <% tran.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+     </ul>
+   </div>
+   <% end %>
+<%= simple_form_for @tran do |f| %>
+  <%= f.input :date %>
+  <%= f.input :quality %>
+  <%= f.input :type %>
+  <%= f.submit %>
+<% end %>

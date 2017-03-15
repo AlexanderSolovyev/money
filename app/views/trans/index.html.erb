@@ -1,0 +1,10 @@
+<h1>Trans#index</h1>
+<%= link_to 'New', new_tran_path %>
+<br />
+<% @trans.each do |tran| %>
+  <%= tran.date %>
+  <%= tran.quality %>
+<%= link_to 'Edit', edit_tran_path(tran) %>
+<%= link_to 'Destroy', tran, method: :delete %>
+<br />
+<% end %>
