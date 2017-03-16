@@ -1,0 +1,10 @@
+<h1>Types#index</h1>
+<%= link_to 'New', new_type_path %>
+<br />
+<% @type.each do |type| %>
+  <%= type.operation %>
+  <%= type.debet %>
+<%= link_to 'Edit', edit_type_path(type) %>
+<%= link_to 'Destroy', type, method: :delete %>
+<br />
+<% end %>
