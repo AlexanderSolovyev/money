@@ -12,5 +12,6 @@
   <%= f.input :date %>
   <%= f.input :quality %>
   <%= f.association :type, label_method: :operation, value_method: :id, include_blank: false  %>
+  <%= f.association :card, label_method: :name, value_method: :id, include_black: false %>
   <%= f.submit %>
 <% end %>
