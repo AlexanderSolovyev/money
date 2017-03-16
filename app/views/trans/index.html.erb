@@ -4,6 +4,7 @@
 <% @trans.each do |tran| %>
   <%= tran.date %>
   <%= tran.quality %>
+  <%= tran.type.operation %>
 <%= link_to 'Edit', edit_tran_path(tran) %>
 <%= link_to 'Destroy', tran, method: :delete %>
 <br />

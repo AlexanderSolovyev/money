@@ -27,10 +27,9 @@ class TransController < ApplicationController
   end
   private
   def tran_params
-    params.require(:tran).permit(:date,:quality)
+    params.require(:tran).permit(:date,:quality,:type_id)
   end
   def find_tran
     @tran=Tran.find(params[:id])
-    @type=Type.all
   end
 end

@@ -11,6 +11,6 @@
 <%= simple_form_for @tran do |f| %>
   <%= f.input :date %>
   <%= f.input :quality %>
-  <%= f.association :type, collection: @type.operation %>
+  <%= f.association :type, label_method: :operation, value_method: :id, include_blank: false  %>
   <%= f.submit %>
 <% end %>
