@@ -1,0 +1,28 @@
+<h1>Hello Money -))</h1>
+<div class='row'>
+  <div class='col-md-2'>
+    <table class='table'>
+      <% @cards.each do |card| %>
+        <tr>
+          <td><%= card.name %></td>
+          <td><%= card.balance %></td>
+        </tr>
+        <% end %>
+    </table>
+  </div>
+</div>
+<hr>
+<div class='row'>
+<%= render 'trans/form' %>
+<table class='table'>
+<% @trans.each do |tran| %>
+  <tr>
+    <td><%= tran.date %></td>
+    <td><%= tran.quality %></td>
+    <td><%= tran.type.operation %></td>
+    <td><%= tran.card.name %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+</div>

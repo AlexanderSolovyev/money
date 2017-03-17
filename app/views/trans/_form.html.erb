@@ -1,19 +1,19 @@
 <div class='col-md-4'>
-<% if tran.errors.any? %>
+<% if @tran.errors.any? %>
    <div id="error_explanation">
-     <h2><%= pluralize(tran.errors.count, "error") %>error </h2>
+     <h2><%= pluralize(@tran.errors.count, "error") %>error </h2>
      <ul>
-       <% tran.errors.full_messages.each do |message| %>
+       <% @tran.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
      </ul>
    </div>
    <% end %>
-<%= simple_form_for @tran do |f| %>
+   <%= simple_form_for @tran do |f| %>
   <%= f.input :date %>
   <%= f.input :quality %>
   <%= f.association :type, label_method: :operation, value_method: :id, include_blank: false  %>
   <%= f.association :card, label_method: :name, value_method: :id, include_black: false %>
-  <%= f.button :submit %>
+  <%= f.button :submit, class: 'btn btn-primary' %>
 <% end %>
 </div>
