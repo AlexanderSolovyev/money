@@ -16,7 +16,7 @@ class TransController < ApplicationController
   def create 
    @tran=Tran.new(tran_params)
    if @tran.save
-      redirect_to trans_path
+      redirect_to root_path
    else
      render :edit
    end

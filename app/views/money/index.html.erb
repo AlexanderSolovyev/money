@@ -13,16 +13,17 @@
 </div>
 <hr>
 <div class='row'>
-<%= render 'trans/form' %>
-<table class='table'>
-<% @trans.each do |tran| %>
-  <tr>
-    <td><%= tran.date %></td>
-    <td><%= tran.quality %></td>
-    <td><%= tran.type.operation %></td>
-    <td><%= tran.card.name %></td>
-  </tr>
-<% end %>
-</table>
-</div>
+  <%= render 'trans/form' %>
+  <div class='col-md-8'>
+  <table class='table'>
+    <% @trans.each do |tran| %>
+      <tr>
+         <td><%= tran.date %></td>
+         <td><%= tran.quality %></td>
+         <td><%= tran.type.operation %></td>
+         <td><%= tran.card.name %></td>
+      </tr>
+    <% end %>
+  </table>
+  </div>
 </div>
