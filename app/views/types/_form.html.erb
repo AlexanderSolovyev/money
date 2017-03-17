@@ -1,5 +1,7 @@
-<%= simple_form_for @type do |f| %>
+<div class='col-md-4'>
+<%= simple_form_for @type, html: { class: "form-horizontal"} do |f| %>
   <%= f.input :operation %>
   <%= f.input :debet %>
-  <%= f.submit %>
+  <%= f.button :submit %>
 <% end %>
+</div>

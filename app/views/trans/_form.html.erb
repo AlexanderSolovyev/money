@@ -1,3 +1,4 @@
+<div class='col-md-4'>
 <% if tran.errors.any? %>
    <div id="error_explanation">
      <h2><%= pluralize(tran.errors.count, "error") %>error </h2>
@@ -13,5 +14,6 @@
   <%= f.input :quality %>
   <%= f.association :type, label_method: :operation, value_method: :id, include_blank: false  %>
   <%= f.association :card, label_method: :name, value_method: :id, include_black: false %>
-  <%= f.submit %>
+  <%= f.button :submit %>
 <% end %>
+</div>
