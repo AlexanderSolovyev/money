@@ -3,5 +3,6 @@ class MoneyController < ApplicationController
     @cards=Card.all
     @trans=Tran.all
     @tran=Tran.new
+    @totals=Card.totals
   end
 end
