@@ -16,6 +16,10 @@ class TransController < ApplicationController
   def create 
    @tran=Tran.new(tran_params)
    if @tran.save
+     quality=@tran.quality
+     card_id=@tran.card_id
+     card=Card.find_by_id(card_id)
+     card.balance_change (quality)
       redirect_to root_path
    else
      render :edit

@@ -8,4 +8,8 @@ class Card < ApplicationRecord
     end
     return @totals
   end
+  def balance_change(quality)
+    self.balance=self.balance-quality
+    self.save
+  end
 end
