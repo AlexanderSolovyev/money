@@ -1,12 +1,17 @@
 <h1>Trans#index</h1>
-<%= link_to 'New', new_tran_path %>
-<br />
-<% @trans.each do |tran| %>
-  <%= tran.date %>
-  <%= tran.quality %>
-  <%= tran.type.operation %>
-  <%= tran.card.name %>
-<%= link_to 'Edit', edit_tran_path(tran) %>
-<%= link_to 'Destroy', tran, method: :delete %>
-<br />
+<div class='col-md-6'>
+  <%= link_to 'New', new_tran_path %>
+  <table class='table'>
+    <% @trans.each do |tran| %> 
+      <tr>
+        <td><%= tran.date %></td>
+        <td><%= tran.type.operation %></td>
+        <td><%= tran.quality %></td>
+        <td><%= tran.card.name %></td>
+        <td><%= link_to 'Edit', edit_tran_path(tran) %>
+        <%= link_to 'Destroy', tran, method: :delete %></td>
+      </tr>
 <% end %>
+  </table>
+  <%= link_to 'Back', root_path %>
+</div>
