@@ -31,8 +31,14 @@ class TransController < ApplicationController
    end
   end
   def destroy
-    @tran.destroy
-    redirect_to trans_path
+    @quality=-@tran.quality
+    if @tran.destroy
+      card=Card.find_by_id(@tran.card_id)
+      card.balance_change(@quality)
+      redirect_to trans_path
+    else
+      redirect_to trans_path§
+    end
   end
   private
   def tran_params
