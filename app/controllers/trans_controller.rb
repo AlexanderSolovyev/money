@@ -9,8 +9,15 @@ class TransController < ApplicationController
   def edit
   end
   def update
-   @tran.update_attributes(tran_params)
-   redirect_to trans_path
+    @quality=@tran.quality
+   if @tran.update_attributes(tran_params)
+    @uality=@tran.quality-@quality
+    card=Card.find_by_id(@tran.card_id)
+    card.balance_change(@uality)
+    redirect_to trans_path
+   else
+     render :edit
+   end
   end
 
   def create 
