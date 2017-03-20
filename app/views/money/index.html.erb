@@ -1,7 +1,6 @@
 <h1>Hello Money -))</h1>
 <div class='row'>
-  <div class='col-md-2'>
-    <%= link_to 'Cards', cards_path %>
+  <div class='col-md-3'>
     <table class='table'>
       <% @cards.each do |card| %>
         <tr>
@@ -10,7 +9,7 @@
         </tr>
         <% end %>
         <tr>
-          <td>Totals</td>
+          <td><%= t('.totals')%></td>
           <td><%= @totals %>
       </tr>
     </table>
@@ -20,14 +19,18 @@
 <div class='row'>
   <%= render 'trans/form' %>
   <div class='col-md-8'>
-    <%= link_to 'Trans', trans_path %>
-    <%= link_to 'Operations', types_path %>
-  <table class='table'>
+    <table class='table'>
+      <tr>
+        <td><%= link_to t('.trans'), trans_path %></td>
+        <td><%= link_to t('.operations'), types_path %></td>
+        <td></td>
+        <td><%= link_to t('.cards'), cards_path %></td>
+      </tr>
     <% @trans.each do |tran| %>
       <tr>
          <td><%= tran.date %></td>
-         <td><%= tran.quality %></td>
          <td><%= tran.type.operation %></td>
+         <td><%= tran.quality %></td>
          <td><%= tran.card.name %></td>
       </tr>
     <% end %>

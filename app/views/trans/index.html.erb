@@ -1,6 +1,6 @@
-<h1>Trans#index</h1>
+<h1><%= t('.trans') %></h1>
 <div class='col-md-6'>
-  <%= link_to 'New', new_tran_path %>
+  <%= link_to t('common.new'), new_tran_path %>
   <table class='table'>
     <% @trans.each do |tran| %> 
       <tr>
@@ -8,10 +8,10 @@
         <td><%= tran.type.operation %></td>
         <td><%= tran.quality %></td>
         <td><%= tran.card.name %></td>
-        <td><%= link_to 'Edit', edit_tran_path(tran) %>
-        <%= link_to 'Destroy', tran, method: :delete %></td>
+        <td><%= link_to t('common.edit'), edit_tran_path(tran) %>
+        <%= link_to t('common.destroy'), tran, method: :delete %></td>
       </tr>
 <% end %>
   </table>
-  <%= link_to 'Back', root_path %>
+  <%= link_to t('common.back'), root_path %>
 </div>

@@ -1,14 +1,14 @@
-<h1>Types#index</h1>
-<div class='col-md-4'>
-  <%= link_to 'New', new_type_path %>
+<h1><%= t('.types') %></h1>
+<div class='col-md-8'>
+  <%= link_to t('common.new'), new_type_path %>
   <table class='table'>
     <% @type.each do |type| %>
       <tr>
         <td><%= type.operation %></td>
         <td><%= type.debet %></td>
-        <td><%= link_to 'Edit', edit_type_path(type) %>
-        <%= link_to 'Destroy', type, method: :delete %></td>
+        <td><%= link_to t('common.edit'), edit_type_path(type) %>
+        <%= link_to t('common.destroy'), type, method: :delete %></td>
 <% end %>
   </table>
-  <%= link_to 'Back', root_path %>
+  <%= link_to t('common.back'), root_path %>
 </div>

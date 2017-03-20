@@ -1,0 +1,56 @@
+ru:
+  date:
+    order:
+      - "day"
+      - "month"
+      - "year"
+    month_names: [~, Январь, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь]
+  activerecord:
+    models:
+      card: 'Карта'
+      tran: 'Транзакция'
+      type: 'Тип операции'
+    attributes:
+      card:
+        name: 'Название'
+        balance: 'Баланс'
+      tran: 
+        date: 'Дата'
+        quality: 'Количество'
+        type: 'Тип операции'
+        card: 'Карта'
+      type:
+        operation: 'Операция'
+  money:
+    index:
+      cards: 'Карты'
+      totals: 'Итого' 
+      trans: 'Транзакции'
+      operations: 'Вид операции'
+  cards:
+    edit:
+      edit card: 'Редактировать карту'
+    new:
+      new card: 'Новая карта'
+    index:
+      cards: 'Карты'
+  trans:
+    edit:
+      edit tran: 'Редактировать транзакцию'
+    index:
+      trans: 'Транзакции'
+    new:
+      new tran: 'Новая транзакция'
+  types:
+    edit:
+      edit type: 'Редактировать тип'
+    index:
+      types: 'Тип операции'
+    new:
+      new type: 'Новый тип'
+  common:
+    back: 'Назад'
+    new: 'Создать'
+    edit: 'Редактировать'
+    destroy: 'Убить'
+

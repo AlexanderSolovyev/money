@@ -1,6 +1,6 @@
-<h1>Cards#show</h1>
+<h1><%= t('.cards') %></h1>
 <div class='col-md-4'>
-<%= link_to 'New', new_card_path %>
+<%= link_to t('common.new'), new_card_path %>
 <br />
 <table class='table'>
 
@@ -8,10 +8,10 @@
   <tr>
     <td><%= card.name %></td>
     <td><%= card.balance %></td>
-    <td><%= link_to 'Edit', edit_card_path(card) %>
-        <%= link_to 'Destroy', card, method: :delete %></td>
+    <td><%= link_to t('common.edit'), edit_card_path(card) %>
+        <%= link_to t('common.destroy'), card, method: :delete %></td>
   </tr>
 <% end %>
 </table>
-<%= link_to 'Back', root_path %>
+<%= link_to t('common.back'), root_path %>
 </div>
