@@ -10,13 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170316180656) do
+ActiveRecord::Schema.define(version: 20170321105258) do
 
   create_table "cards", force: :cascade do |t|
     t.string   "name"
     t.decimal  "balance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "plans", force: :cascade do |t|
+    t.date     "date"
+    t.decimal  "quality"
+    t.string   "comment"
+    t.integer  "type_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["type_id"], name: "index_plans_on_type_id"
   end
 
   create_table "trans", force: :cascade do |t|

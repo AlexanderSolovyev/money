@@ -1,0 +1,14 @@
+<h1>Plans#index</h1>
+<%= link_to t('common.new'), new_plan_path %>
+<table class='table'>
+<% @plans.each do |plan| %>
+  <tr>
+    <td><%= plan.date %></td>
+    <td><%= plan.type.operation %></td>
+    <td><%= plan.comment %></td>
+    <td><%= plan.quality %></td>
+    <td><%= link_to t('common.edit'), edit_plan_path(plan) %>
+    <%= link_to t('common.destroy'), plan, method: :delete %></td>
+  </tr>
+<% end %>
+</table>
