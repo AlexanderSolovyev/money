@@ -16,7 +16,7 @@ ru:
         balance: 'Баланс'
       tran: 
         date: 'Дата'
-        quality: 'Количество'
+        quality: 'Сумма'
         type: 'Тип операции'
         card: 'Карта'
       type:
