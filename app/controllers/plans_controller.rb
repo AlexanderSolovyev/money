@@ -20,6 +20,12 @@ class PlansController < ApplicationController
     @plan.destroy
     redirect_to plans_path
   end
+  def report
+  end
+  def report_date
+    @date=params[:date]
+    render :report
+  end
   private
   def plan_params
     params.require(:plan).permit(:date, :type_id, :comment, :quality)

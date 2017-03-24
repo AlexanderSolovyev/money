@@ -1,4 +1,6 @@
 <h1>Plans#index</h1>
+<div class='row'>
+<div class='col-md-12'>
 <%= link_to t('common.new'), new_plan_path %>
 <table class='table'>
 <% @plans.each do |plan| %>
@@ -12,3 +14,5 @@
   </tr>
 <% end %>
 </table>
+</div>
+</div>

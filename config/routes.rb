@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :plans
+  resources :plans do
+    get 'report', on: :collection
+    post 'report_date', on: :collection
+  end
   root 'money#index'
 
   resources :types

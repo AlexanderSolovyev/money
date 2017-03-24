@@ -1,0 +1,7 @@
+<h1>Report</h1>
+<div class='row'>
+  <%= simple_form_for :month, { url: report_date_plans_path } do |f| %>
+    <%= f.input :date, as: :date, value: @date, order: [:month, :year] %>
+    <%= f.button :submit %>
+  <% end%>
+</div>
